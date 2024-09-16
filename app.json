@@ -1,27 +1,42 @@
 {
   "expo": {
-    "name": "Weather-App",
-    "slug": "Weather-App",
+    "name": "Climate",
+    "slug": "climate",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/images/ice-cream.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
+    
       "backgroundColor": "#ffffff"
     },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "REPLACE_FOR_API_KEY"
+      }
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+      "package":"com.ferrelli.climate",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCPwMeGSJCK4fhXpPkLcWNpW9XD5oJUQ3E"
+        }
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon.png",
+      "config": {
+        "googleMaps": {
+          "apiKey": "REPLACE_FOR_API_KEY"
+        }
+      }
+    },
+    "description": ""
   }
 }
