@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     }, 
 
     buttonPress:{
-      backgroundColor: "#F0A500",
+      backgroundColor: "#6200ea",
       padding: 7,
       }
     

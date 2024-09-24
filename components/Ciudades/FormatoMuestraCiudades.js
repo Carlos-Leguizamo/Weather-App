@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         textAlignVertical: 'center',
-        borderColor: '#F0A500',
+        borderColor: '#6200ea',
         borderBottomWidth: 0.5,
         paddingVertical: 10,    
     },

@@ -51,7 +51,7 @@ const Climate = () =>{
 
       <View style = {styles.app}>
 
-       <StatusBar barStyle = "light-content" backgroundColor='#F0A500' />
+       <StatusBar barStyle = "light-content" backgroundColor='#6200ea' />
      
         <View style = {styles.view}>
 
