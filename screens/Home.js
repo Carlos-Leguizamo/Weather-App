@@ -9,7 +9,7 @@ export default function Home({navigation}){
     return(
        
         <ScrollView style={styles.scrollView}>
-             <StatusBar barStyle = "light-content" backgroundColor='#F0A500' />
+             <StatusBar barStyle = "light-content" backgroundColor='#6200ea' />
 
             
                 <AppStructure navigation = {navigation}/>

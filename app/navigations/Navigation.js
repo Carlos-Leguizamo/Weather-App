@@ -1,13 +1,11 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
 import HomeStack from "./HomeStack";
 import CiudadesStack from "./CiudadesStack";
 import ClimateStack from "./ClimateStack";
 import AboutStack from "./AboutStack";
-
-import { Icon } from "react-native-elements/dist/icons/Icon";
+import { Icon } from "react-native-elements";
 
 const Tab = createBottomTabNavigator();
 
@@ -16,36 +14,31 @@ export default function Navigation() {
     <NavigationContainer>
       <Tab.Navigator
         initialRouteName="home"
-        tabBarOptions={{
-          inactiveTintColor: "#646464",
-          activeTintColor: "#6200ea",
-        }}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ color }) => screenOptions(route, color),
+          tabBarInactiveTintColor: "#646464",
+          tabBarActiveTintColor: "#6200ea",
         })}
       >
         <Tab.Screen
           name="home"
           component={HomeStack}
-          options={{ title: "Inicio" }}
+          options={{ headerShown: false }}
         />
-
         <Tab.Screen
           name="ciudades"
           component={CiudadesStack}
-          options={{ title: "Ciudades" }}
+          options={{ headerShown: false }}
         />
-
         <Tab.Screen
           name="climate"
           component={ClimateStack}
-          options={{ title: "Clima" }}
+          options={{ headerShown: false }}
         />
-
         <Tab.Screen
           name="about"
           component={AboutStack}
-          options={{ title: "Acerca de" }}
+          options={{ headerShown: false }}
         />
       </Tab.Navigator>
     </NavigationContainer>
