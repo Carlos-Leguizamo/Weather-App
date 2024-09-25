@@ -15,7 +15,7 @@ export default function CiudadesStack(){
 
           screenOptions={{
             headerStyle: {
-              backgroundColor: '#F0A500', 
+              backgroundColor: '#6200ea', 
             },
 
             headerTintColor: 'white',

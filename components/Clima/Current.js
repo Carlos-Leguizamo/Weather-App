@@ -137,7 +137,7 @@ icono: {
     alignItems: 'center',
     textAlignVertical: 'center',
 
-    borderColor: '#F0A500',
+    borderColor: '#6200ea',
     borderWidth: 0.5,
     backgroundColor: 'lightgrey',
 

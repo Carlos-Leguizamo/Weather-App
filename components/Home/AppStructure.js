@@ -45,8 +45,8 @@ const AppStructure = ({ navigation }) =>{
                 
                 title='ir a ciudades'
                 containerStyle={{width: 150}}
-                buttonStyle = {{backgroundColor: "lightgrey", borderWidth: 1,  borderColor: "#F0A500" }}
-                titleStyle= {{color: "#F0A500"}}
+                buttonStyle = {{backgroundColor: "lightgrey", borderWidth: 1,  borderColor: "#6200ea" }}
+                titleStyle= {{color: "#6200ea"}}
                 onPress = {() => navigation.navigate('ciudades')}
                 />
 
@@ -64,8 +64,8 @@ const AppStructure = ({ navigation }) =>{
                 
                 title='ir a clima'
                 containerStyle={{width: 150}}
-                buttonStyle = {{backgroundColor: "lightgrey", borderWidth: 1,  borderColor: "#F0A500" }}
-                titleStyle= {{color: "#F0A500"}}
+                buttonStyle = {{backgroundColor: "lightgrey", borderWidth: 1,  borderColor: "#6200ea" }}
+                titleStyle= {{color: "#6200ea"}}
                 
                 onPress = {() => navigation.navigate('climate')}
                 />
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
         width: '90%',
         alignItems: 'center',
         borderRadius: 10,
-        borderColor: '#F0A500',
+        borderColor: '#6200ea',
         borderWidth: 0.5,
         backgroundColor: 'lightgrey',
         

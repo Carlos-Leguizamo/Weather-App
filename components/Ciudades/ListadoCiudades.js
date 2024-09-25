@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderWidth: 1,
         borderRadius: 20,
-        borderColor: '#F0A500',
+        borderColor: '#6200ea',
         textAlign: 'center',
         color: 'grey',
         fontSize: 15,
