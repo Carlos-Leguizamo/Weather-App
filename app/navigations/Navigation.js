@@ -21,22 +21,22 @@ export default function Navigation() {
         })}
       >
         <Tab.Screen
-          name="home"
+          name="Inicio"
           component={HomeStack}
           options={{ headerShown: false }}
         />
         <Tab.Screen
-          name="ciudades"
+          name="Ciudades"
           component={CiudadesStack}
           options={{ headerShown: false }}
         />
         <Tab.Screen
-          name="climate"
+          name="Clima"
           component={ClimateStack}
           options={{ headerShown: false }}
         />
         <Tab.Screen
-          name="about"
+          name="Nosotros"
           component={AboutStack}
           options={{ headerShown: false }}
         />
@@ -49,19 +49,19 @@ function screenOptions(route, color) {
   let iconName;
 
   switch (route.name) {
-    case "home":
+    case "Inicio":
       iconName = "home-outline";
       break;
-    case "ciudades":
+    case "Ciudades":
       iconName = "playlist-edit";
       break;
-    case "climate":
+    case "Clima":
       iconName = "weather-cloudy";
       break;
     case "maps":
       iconName = "google-maps";
       break;
-    case "about":
+    case "Nosotros":
       iconName = "account-supervisor-outline";
       break;
     default:
