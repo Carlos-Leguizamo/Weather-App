@@ -26,6 +26,10 @@
         "googleMaps": {
           "apiKey": "AIzaSyCPwMeGSJCK4fhXpPkLcWNpW9XD5oJUQ3E"
         }
+      },
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/ice-cream.png",
+        "backgroundColor": "#FFFFFF"
       }
     },
     "web": {

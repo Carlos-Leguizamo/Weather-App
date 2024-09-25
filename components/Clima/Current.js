@@ -43,7 +43,7 @@ const Current = ({temp,
             <View style = {styles.icono}>
             <Image 
             style = {styles.image}
-            source = {{uri:`http://openweathermap.org/img/w/${icono}.png`}}/>
+            source = {{uri:`https://openweathermap.org/img/w/${icono}.png`}}/>
             </View>
             
             </View>
