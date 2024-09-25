@@ -31,7 +31,7 @@ const AnimacionEntrada = ({setAnimated}) => {
        <>
          <StatusBar
            animated={true}
-           backgroundColor='#F0A500'
+           backgroundColor='#6200ea'
            barStyle="light-content"
          />
          <View style={styles.container}>
