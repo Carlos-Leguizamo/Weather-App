@@ -6,7 +6,6 @@
     "orientation": "portrait",
     "icon": "./assets/images/ice-cream.png",
     "splash": {
-    
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -22,7 +21,7 @@
       }
     },
     "android": {
-      "package":"com.ferrelli.climate",
+      "package": "com.ferrelli.climate",
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyCPwMeGSJCK4fhXpPkLcWNpW9XD5oJUQ3E"
@@ -37,6 +36,11 @@
         }
       }
     },
-    "description": ""
+    "description": "",
+    "extra": {
+      "eas": {
+        "projectId": "26e3c6bb-b3a5-47d8-b9cd-ce5ca7d682e8"
+      }
+    }
   }
 }
