@@ -25,7 +25,7 @@ export default function ClimateStack(){
             <Stack.Screen
                 name="Climate"
                 component={Climate}
-                options={{title: "Ver Clima"}}
+                options={{title: "Climate"}}
             />
         </Stack.Navigator>
     );

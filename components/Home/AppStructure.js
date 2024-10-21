@@ -16,7 +16,7 @@ const AppStructure = ({ navigation }) =>{
             
                 <Text style={styles.bienvenida_uno}>
 
-                    Hola Carlos Leguizamo!
+                    ¡Bienvenid@s!
 
                 </Text>
 
@@ -47,7 +47,7 @@ const AppStructure = ({ navigation }) =>{
                 containerStyle={{width: 150}}
                 buttonStyle = {{backgroundColor: "lightgrey", borderWidth: 1,  borderColor: "#6200ea" }}
                 titleStyle= {{color: "#6200ea"}}
-                onPress = {() => navigation.navigate('ciudades')}
+                onPress = {() => navigation.navigate('Ciudades')}
                 />
 
             </View>
@@ -67,7 +67,7 @@ const AppStructure = ({ navigation }) =>{
                 buttonStyle = {{backgroundColor: "lightgrey", borderWidth: 1,  borderColor: "#6200ea" }}
                 titleStyle= {{color: "#6200ea"}}
                 
-                onPress = {() => navigation.navigate('climate')}
+                onPress = {() => navigation.navigate('Climate')}
                 />
 
             </View>

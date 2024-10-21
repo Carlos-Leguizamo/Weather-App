@@ -19,7 +19,7 @@ export default function Nosotros() {
         <View style={styles.card}>
           <Text style={styles.textTituloTeam}>Carlos Leguizamo</Text>
           <Text style={styles.text}>
-            Breve descripcion de noisotros....
+            Breve descripcion de nosotros....
           </Text>
           <Image
             source={require("../../assets/images/Fede.jpg")}
@@ -30,7 +30,7 @@ export default function Nosotros() {
         <View style={styles.card}>
           <Text style={styles.textTituloTeam}>John Vargas</Text>
           <Text style={styles.text}>
-          Breve descripcion de noisotros....
+          Breve descripcion de nosotros....
           </Text>
 
           <Image
@@ -41,7 +41,7 @@ export default function Nosotros() {
         <View style={styles.card}>
           <Text style={styles.textTituloTeam}>Santiago Firigua</Text>
           <Text style={styles.text}>
-          Breve descripcion de noisotros....
+          Breve descripcion de nosotros....
           </Text>
 
           <Image
