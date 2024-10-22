@@ -11,8 +11,6 @@ export default function CiudadesStack(){
     return(
         <Stack.Navigator 
 
-          initialRouteName='ciudades'
-
           screenOptions={{
             headerStyle: {
               backgroundColor: '#6200ea', 
@@ -28,8 +26,8 @@ export default function CiudadesStack(){
             },
           }}>
               
-            <Stack.Screen
-                name="Ciudades"
+              <Stack.Screen
+                name="Ciudades" 
                 component={Ciudades}
                 options={{title: "Ciudades"}}
             />

@@ -67,7 +67,7 @@ const AppStructure = ({ navigation }) =>{
                 buttonStyle = {{backgroundColor: "lightgrey", borderWidth: 1,  borderColor: "#6200ea" }}
                 titleStyle= {{color: "#6200ea"}}
                 
-                onPress = {() => navigation.navigate('Climate')}
+                onPress = {() => navigation.navigate('Clima')}
                 />
 
             </View>
