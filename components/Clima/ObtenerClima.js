@@ -82,13 +82,14 @@ const ObtenerClima = ( {latitudCiudad, longitudCiudad, trigger, setTrigger, ciud
 
             
             
-    const appikey = 'ba1cc65b03d369778c8ef79d62d52ffd';
+    const appikey = '910bcf1fb3c2e64116d3adbb492a933c';
     const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitudCiudad}&lon=${longitudCiudad}&units=metric&lang=es&appid=${appikey}`;
     
     
         try {
             const respuesta = await fetch(url);
             const resultado = await respuesta.json();
+            console.log(resultado);            
            
     
             
@@ -152,6 +153,7 @@ const ObtenerClima = ( {latitudCiudad, longitudCiudad, trigger, setTrigger, ciud
             setSelectValue("Que ciudad deseas ver?")    
         }
         catch (error){
+            console.error('Error fetching weather data:', error); // Esto imprimirá el error en la consola
             setModalVisible(false)
             Alert.alert(
             'Oops',
@@ -159,6 +161,7 @@ const ObtenerClima = ( {latitudCiudad, longitudCiudad, trigger, setTrigger, ciud
             [{text: 'Ok'}]
             )
         }
+        
     }   
 }; 
 
@@ -179,7 +182,7 @@ return(
     <View style={styles.viewEmptyText}>
             <Text style={styles.emptyText}>
               
-            Elegí una ciudad para ver las condiciones climáticas actuales y el pronóstico
+            Elige una ciudad para ver las condiciones climáticas actuales y el pronóstico
             </Text>
     </View>
 
