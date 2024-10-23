@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
-
+import { View, Text, StyleSheet, Linking, TouchableOpacity } from "react-native";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function Nosotros() {
   return (
@@ -8,46 +8,29 @@ export default function Nosotros() {
       <View style={styles.card}>
         <Text style={styles.textTitulo}>Desarrollo del Proyecto</Text>
         <Text style={styles.text}>
-            Esta aplicación fue desarrollada en el marco del curso de Programación de Dispositivos Móviles de la Universidad Surcolombiana.
-            Implementada en su totalidad utilizando React Native, con el apoyo del framework Expo para optimizar el proceso de desarrollo.{"\n"}
-            Además, se empleó GitHub como herramienta de colaboración y control de versiones, garantizando una gestión eficiente del código.
+          Esta aplicación permite consultar el pronóstico del clima para los próximos 7 días en todos los municipios colombianos. {"\n"} {"\n"}
+
+          Fue desarrollada en el marco del curso de Programación de Dispositivos Móviles de la Universidad Surcolombiana.
+          Implementada en su totalidad utilizando React Native, con el apoyo del framework Expo para optimizar el proceso de desarrollo.{"\n"}
+          Además, se empleó GitHub como herramienta de colaboración y control de versiones, garantizando una gestión eficiente del código.
         </Text>
-
       </View>
-      <View style={styles.cardTeam}>
-        <Text style={styles.textTitulo}>EQUIPO DE DESARROLLO</Text>
-        <View style={styles.card}>
-          <Text style={styles.textTituloTeam}>Carlos Leguizamo</Text>
-          <Text style={styles.text}>
-            Breve descripcion de nosotros....
-          </Text>
-          <Image
-            source={require("../../assets/images/Fede.jpg")}
-            style={styles.image}
-          />
-        </View>
 
-        <View style={styles.card}>
-          <Text style={styles.textTituloTeam}>John Vargas</Text>
-          <Text style={styles.text}>
-          Breve descripcion de nosotros....
-          </Text>
+      <View style={styles.card}>
+        <Text style={styles.textTitulo}>Autores</Text>
+        <Text style={[styles.text, { textAlign: 'center' }]}>
+          Carlos Eduardo Leguizamo Ramírez.{"\n"}
+          John Camilo Garzón Vargas.{"\n"}
+          Santiago Firigua Palma.
+    </Text>
+      </View>
 
-          <Image
-            source={require("../../assets/images/Guille.jpg")}
-            style={styles.image}
-          />
-        </View>
-        <View style={styles.card}>
-          <Text style={styles.textTituloTeam}>Santiago Firigua</Text>
-          <Text style={styles.text}>
-          Breve descripcion de nosotros....
-          </Text>
-
-          <Image
-            source={require("../../assets/images/Guille.jpg")}
-            style={styles.image}
-          />
+      <View style={styles.card}>
+        <Text style={styles.textTitulo}>Repositorio</Text>
+        <View style={styles.iconContainer}>
+          <TouchableOpacity onPress={() => Linking.openURL("https://github.com/Carlos-Leguizamo/Weather-App")}>
+            <Icon name="github" size={30} color="#000" style={styles.icon} />
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -57,9 +40,7 @@ export default function Nosotros() {
 const styles = StyleSheet.create({
   view: {
     flex: 1,
-
     alignItems: "center",
-
     marginTop: 0,
   },
   card: {
@@ -100,12 +81,9 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.27,
     shadowRadius: 4.65,
-
     elevation: 10,
-
     paddingHorizontal: 10,
     paddingVertical: 12,
-
     marginVertical: 20,
   },
   text: {
@@ -126,20 +104,12 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
   },
-  textTituloTeam: {
-    textAlign: "center",
-    paddingHorizontal: 10,
-    letterSpacing: 1.05,
-    marginBottom: 20,
-    color: "rgba(0,0,0, 0.6)",
-    lineHeight: 20,
-    fontSize: 16,
-    fontWeight: "bold",
+  iconContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginVertical: 10,
   },
-  image: {
-    width: 100,
-    height: 100,
-    marginBottom: "5%",
-
+  icon: {
+    marginHorizontal: 10,
   },
 });

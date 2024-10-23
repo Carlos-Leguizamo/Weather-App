@@ -25,7 +25,7 @@ export default function ClimateStack(){
           }}>
               
             <Stack.Screen
-                name="Clima"
+                name="Climas"
                 component={Clima}
                 options={{title: "Clima"}}
             />
