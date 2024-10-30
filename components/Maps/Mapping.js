@@ -38,7 +38,7 @@ export default function Mapping({ ciudad, setModalVisibleMapas, navigation }) {
     };
 
     latAndLongCiudad();
-  }, [ciudad]); // Asegúrate de que solo se ejecute cuando 'ciudad' cambie
+  }, [ciudad]);
 
   return (
     <View style={styles.container}>

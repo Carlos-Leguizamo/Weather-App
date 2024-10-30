@@ -29,7 +29,7 @@ export default function Maps({navigation, route}){
 
    
         <Button
-          onPress = {() => navigation.navigate('Ciudades')}
+          onPress = {() => navigation.navigate('Ciudad')}
           title="Volver"
           color="#F0A500"
           containerStyle={styles.buttonContainer}
