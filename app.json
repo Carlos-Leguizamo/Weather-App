@@ -4,24 +4,47 @@
     "slug": "Weather-App",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/images/ice-cream.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "REPLACE_FOR_API_KEY"
+      }
     },
     "android": {
+      "package": "com.ferrelli.climate",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCPwMeGSJCK4fhXpPkLcWNpW9XD5oJUQ3E"
+        }
+      },
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/ice-cream.png",
+        "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "config": {
+        "googleMaps": {
+          "apiKey": "REPLACE_FOR_API_KEY"
+        }
+      }
+    },
+    "description": "",
+    "extra": {
+      "eas": {
+        "projectId": "26e3c6bb-b3a5-47d8-b9cd-ce5ca7d682e8"
+      }
     }
   }
 }
