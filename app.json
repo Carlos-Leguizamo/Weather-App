@@ -1,12 +1,13 @@
 {
   "expo": {
-    "name": "Weather-App",
+    "name": "Weather App",
     "slug": "Weather-App",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/ice-cream.png",
     "splash": {
-    
+      "image": "./assets/images/HELADOS.png",
+      "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -22,7 +23,15 @@
       }
     },
     "android": {
-      "package":"com.ferrelli.climate",
+      "package": "com.usco.weather",
+      "versionCode": 2,
+      "permissions": [
+        "INTERNET"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/ice-cream.png",
+        "backgroundColor": "#FFFFFF"
+      },
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyCPwMeGSJCK4fhXpPkLcWNpW9XD5oJUQ3E"
@@ -37,6 +46,10 @@
         }
       }
     },
-    "description": ""
+    "extra": {
+      "eas": {
+        "projectId": "83d80179-dd76-4833-80fe-c79da82b3fb1"
+      }
+    }
   }
 }
