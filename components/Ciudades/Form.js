@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableHighlight, Alert, Keyboard } from 'react-native';
+import ciudadesColombianasJson from './colombia.json';  // Asegúrate de tener este archivo en tu proyecto.
 
 const Form = ({ ciudadInput, setCiudadInput, listadoCiudades, setListadoCiudades, almacenarCiudades, setModalVisibleCiudades, setModalAccion }) => {
     const [ciudadesColombia, setCiudadesColombia] = useState([]);
 
-    // Función para obtener las ciudades desde la API
+    // Función para obtener las ciudades desde el archivo JSON local
     const obtenerCiudadesColombia = async () => {
         try {
-            const respuesta = await fetch('https://api-colombia.com/api/v1/City');
-            const data = await respuesta.json();
-            setCiudadesColombia(data); // Guardamos las ciudades en el estado
+            // Aquí directamente asignas las ciudades del archivo JSON al estado
+            const data = ciudadesColombianasJson;
+            const todasLasCiudades = data.flatMap(departamento => departamento.ciudades);
+            setCiudadesColombia(todasLasCiudades);  // Guardamos todas las ciudades en el estado
         } catch (error) {
-            Alert.alert('Error', 'No se pudo obtener la lista de ciudades.', [{ text: 'Ok' }]);
+            Alert.alert('Error', 'No se pudo cargar la lista de ciudades desde el archivo.', [{ text: 'Ok' }]);
         }
     };
 
@@ -20,9 +22,9 @@ const Form = ({ ciudadInput, setCiudadInput, listadoCiudades, setListadoCiudades
         obtenerCiudadesColombia();
     }, []);
 
-    // Validar que la ciudad ingresada esté en la lista de ciudades de la API
+    // Validar que la ciudad ingresada esté en la lista de ciudades del JSON
     const validarCiudadColombiana = (ciudadInput) => {
-        return ciudadesColombia.some((ciudad) => ciudad.name.toLowerCase() === ciudadInput.toLowerCase());
+        return ciudadesColombia.some((ciudad) => ciudad.toLowerCase() === ciudadInput.toLowerCase());
     };
 
     // Crear y agregar ciudades
@@ -40,30 +42,14 @@ const Form = ({ ciudadInput, setCiudadInput, listadoCiudades, setListadoCiudades
             return;
         }
 
-        // Si la ciudad es válida, continúa con la llamada a la API de OpenWeatherMap
-        const appikey = 'ba1cc65b03d369778c8ef79d62d52ffd';
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudadInput}&appid=${appikey}`;
-
-        try {
-            const respuesta = await fetch(url);
-            const resultado = await respuesta.json();
-            const citi_name = await resultado.name;
-
-            if (citi_name) {
-                if (listadoCiudades.includes(citi_name)) {
-                    setModalVisibleCiudades(false);
-                    Alert.alert('Oops', 'Parece que la ciudad que ingresaste ya figura en la lista', [{ text: 'Ok' }]);
-                } else {
-                    const ciudadesNuevas = [...listadoCiudades, citi_name];
-                    setListadoCiudades(ciudadesNuevas);
-                    almacenarCiudades(JSON.stringify(ciudadesNuevas));
-                }
-            } else {
-                setModalVisibleCiudades(false);
-                Alert.alert('Oops', 'Parece que la ciudad que ingresaste no existe. Por favor verifica que esté bien escrita.', [{ text: 'Ok' }]);
-            }
-        } catch (error) {
-            Alert.alert('Oops', 'En este momento no podemos acceder a tu pedido. Por favor inténtalo más tarde.', [{ text: 'Ok' }]);
+        // Si la ciudad es válida, continúa con la lógica de agregarla
+        if (listadoCiudades.includes(ciudadInput)) {
+            setModalVisibleCiudades(false);
+            Alert.alert('Oops', 'Parece que la ciudad que ingresaste ya figura en la lista', [{ text: 'Ok' }]);
+        } else {
+            const ciudadesNuevas = [...listadoCiudades, ciudadInput];
+            setListadoCiudades(ciudadesNuevas);
+            almacenarCiudades(JSON.stringify(ciudadesNuevas));
         }
     };
 

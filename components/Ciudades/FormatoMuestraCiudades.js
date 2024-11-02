@@ -57,7 +57,7 @@ const deleteCiti = ciudad =>{
 
             <Image 
                 style = {styles.image}
-                source = {{uri:`http://openweathermap.org/img/w/${ciudadMostrar.weather[0].icon}.png`}}
+                source = {{uri:`https://openweathermap.org/img/w/${ciudadMostrar.weather[0].icon}.png`}}
 
             />
 

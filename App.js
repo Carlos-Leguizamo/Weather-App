@@ -1,11 +1,6 @@
 import React, {useState, useEffect} from "react";
-
 import Navigation from './app/navigations/Navigation';
 import AnimacionEntrada from "./components/Animaciones/AnimacionEntrada";
-
-
-
-
 
 export default function App() {
 
