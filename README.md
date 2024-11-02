@@ -29,11 +29,14 @@ https://www.npmjs.com/package/download
 npx create-expo-app@latest
 ~~~
 
+
+
 #### Instalar NodeJS
 ~~~
 https://nodejs.org/en/download/package-manager
 ~~~
 
+#### Descarga la app de Expo desde la Play Store o App Store
 
 ## Instalación
 
